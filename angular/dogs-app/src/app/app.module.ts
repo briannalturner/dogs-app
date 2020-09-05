@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ConvertSpaces } from './product-list/convertSpaces.component'
+import { StarComponent } from './shared/star.component'
+import { HttpClientModule } from '@angular/common/http'
  
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ConvertSpaces
+    ConvertSpaces,
+    StarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

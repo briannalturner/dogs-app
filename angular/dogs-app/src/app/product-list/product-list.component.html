@@ -1,6 +1,6 @@
 <div class='card'>
     <div class='card-header'>
-        Product List
+      {{ pageTitle }}
     </div>
     <div class='card-body'>
       <div class='row'>
@@ -39,7 +39,7 @@
                 <td>{{ product.productCode | lowercase | ConvertSpaces: '-' }}</td>
                 <td>{{ product.releaseDate }}</td>
                 <td>{{ product.price | currency }}</td>
-                <td>{{ product.starRating }}</td>
+                <td><star-component [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></star-component></td>
             </tr>
           </tbody>
         </table>
